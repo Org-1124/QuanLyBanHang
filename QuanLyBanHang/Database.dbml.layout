@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Database">
+  <DataContextMoniker Name="/DatabaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3f16ad14-3cd8-430f-bbda-f0805a5274f2" absoluteBounds="6.25, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DatabaseDataContext/tblChiTietHoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc55771c-73e9-4533-8a14-29da0e5c2dd6" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef700fb2-2074-412c-847d-ac95967f587f" absoluteBounds="3.5, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DatabaseDataContext/tblHangHoa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="780baff9-aa62-48d6-8f45-1fcddffefbae" absoluteBounds="3.515, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1efbfed7-0be1-40b7-b780-f382429d4526" absoluteBounds="3.5, 0.875, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DatabaseDataContext/tblHoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1c117a1-724f-4ca2-80fe-2a5c8023263c" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a4e09ca-3804-4d73-88e8-bd7be731c2ef" absoluteBounds="0.75, 1, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/DatabaseDataContext/tblKhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0c72b4b-71ca-4b41-be76-93f3ced34460" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="150a9584-ce45-4785-bc12-013b1a9696e9" absoluteBounds="0.75, 3.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DatabaseDataContext/tblNhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3186e0e7-408f-4500-b3e6-579da482b9e2" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.78929768880208); (7.25 : 4.78929768880208); (7.25 : 2.57859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/tblHangHoa/tblHangHoa_tblChiTietHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="ef700fb2-2074-412c-847d-ac95967f587f" />
+        <classShapeMoniker Id="3f16ad14-3cd8-430f-bbda-f0805a5274f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.78929768880208); (6.25 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/tblHoaDon/tblHoaDon_tblChiTietHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="1efbfed7-0be1-40b7-b780-f382429d4526" />
+        <classShapeMoniker Id="3f16ad14-3cd8-430f-bbda-f0805a5274f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.78929768880208); (3.04166666666667 : 1.78929768880208 : JumpStart); (3.20833333333333 : 1.78929768880208 : JumpEnd); (3.5 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/tblKhachHang/tblKhachHang_tblHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="6a4e09ca-3804-4d73-88e8-bd7be731c2ef" />
+        <classShapeMoniker Id="1efbfed7-0be1-40b7-b780-f382429d4526" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.875); (3.125 : 3.5); (3.125 : 1.30089684440104); (3.5 : 1.30089684440104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseDataContext/tblNhanVien/tblNhanVien_tblHoaDon" />
+      <nodes>
+        <classShapeMoniker Id="150a9584-ce45-4785-bc12-013b1a9696e9" />
+        <classShapeMoniker Id="1efbfed7-0be1-40b7-b780-f382429d4526" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

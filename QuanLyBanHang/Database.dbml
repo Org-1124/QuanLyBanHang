@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyBanHang" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Security=True" SettingsObjectName="QuanLyBanHang.Properties.Settings" SettingsPropertyName="QuanLyBanHangConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblChiTietHoaDon" Member="tblChiTietHoaDons">
+    <Type Name="tblChiTietHoaDon">
+      <Column Name="IDHoaDon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDHangHoa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblHangHoa_tblChiTietHoaDon" Member="tblHangHoa" ThisKey="IDHangHoa" OtherKey="IDHangHoa" Type="tblHangHoa" IsForeignKey="true" />
+      <Association Name="tblHoaDon_tblChiTietHoaDon" Member="tblHoaDon" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="tblHoaDon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHangHoa" Member="tblHangHoas">
+    <Type Name="tblHangHoa">
+      <Column Name="IDHangHoa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoLuongCon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblHangHoa_tblChiTietHoaDon" Member="tblChiTietHoaDons" ThisKey="IDHangHoa" OtherKey="IDHangHoa" Type="tblChiTietHoaDon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHoaDon" Member="tblHoaDons">
+    <Type Name="tblHoaDon">
+      <Column Name="IDHoaDon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDKhachHang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tblHoaDon_tblChiTietHoaDon" Member="tblChiTietHoaDons" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="tblChiTietHoaDon" />
+      <Association Name="tblKhachHang_tblHoaDon" Member="tblKhachHang" ThisKey="IDKhachHang" OtherKey="IDKhachHang" Type="tblKhachHang" IsForeignKey="true" />
+      <Association Name="tblNhanVien_tblHoaDon" Member="tblNhanVien" ThisKey="IDNhanVien" OtherKey="IDNhanVien" Type="tblNhanVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKhachHang" Member="tblKhachHangs">
+    <Type Name="tblKhachHang">
+      <Column Name="IDKhachHang" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhachHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblKhachHang_tblHoaDon" Member="tblHoaDons" ThisKey="IDKhachHang" OtherKey="IDKhachHang" Type="tblHoaDon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblNhanVien" Member="tblNhanViens">
+    <Type Name="tblNhanVien">
+      <Column Name="IDNhanVien" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tblNhanVien_tblHoaDon" Member="tblHoaDons" ThisKey="IDNhanVien" OtherKey="IDNhanVien" Type="tblHoaDon" />
+    </Type>
+  </Table>
+</Database>
