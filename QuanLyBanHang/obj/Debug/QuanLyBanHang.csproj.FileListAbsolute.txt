@@ -1,1 +1,10 @@
 D:\Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmHangHoa.resources
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+D:\Work_Group\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
