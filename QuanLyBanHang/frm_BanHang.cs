@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAO.EF;
 namespace QuanLyBanHang
 {
     public partial class frm_BanHang : Form
     {
-        QuanLyBanHangDBContext db = new QuanLyBanHangDBContext();
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         static int total=0;
         static int total_thanhtoan=0;
         public frm_BanHang()
@@ -133,7 +132,7 @@ namespace QuanLyBanHang
                 hd.SoLuong = int.Parse(txtSoluong.Text);
                 if(db.tblKhachHangs.SingleOrDefault(x=>x.IDKhachHang == G_ID) == null)
                 {
-                    kh.IDKhachHang = hd.IDKhachHang;
+                 //   kh.IDKhachHang = hd.IDKhachHang;
                     kh.DiaChi = "";
                     kh.DienThoai = "";
                     kh.TenKhachHang = txtTenKhach.Text;
@@ -194,7 +193,6 @@ namespace QuanLyBanHang
 
                 
         }
-e
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in lvHangHoa.Items)

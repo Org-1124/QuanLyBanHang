@@ -66,8 +66,7 @@
             this.txtSoluong = new System.Windows.Forms.TextBox();
             this.txtSoLuongConLai = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -457,7 +456,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm_BanHang";
             this.Text = "Bán Hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -514,7 +513,6 @@
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTenKhach;
-        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }
 

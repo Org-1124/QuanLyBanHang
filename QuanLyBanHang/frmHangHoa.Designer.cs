@@ -47,7 +47,7 @@
             this.dgvHangHoa = new System.Windows.Forms.DataGridView();
             this.grThongTin.SuspendLayout();
             this.grdata.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -235,7 +235,7 @@
             this.grThongTin.ResumeLayout(false);
             this.grThongTin.PerformLayout();
             this.grdata.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
             this.ResumeLayout(false);
 
         }

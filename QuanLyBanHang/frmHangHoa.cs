@@ -18,7 +18,7 @@ namespace QuanLyBanHang
     }
     public partial class frmHangHoa : Form
     {
-        DatabaseDataContext db = new DatabaseDataContext();
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         LuaChon lc;
         public frmHangHoa()
         {
@@ -118,8 +118,8 @@ namespace QuanLyBanHang
             else hh.SoLuongCon = int.Parse(txtSoLuongCon.Text.ToString());
             if (txtDonGia.Text == "") hh.DonGia = null;
             else hh.DonGia = int.Parse(txtDonGia.Text);
-            db.tblHangHoas.InsertOnSubmit(hh);
-            db.SubmitChanges();
+            db.tblHangHoas.Add(hh);
+            db.SaveChanges();
         }
         void SuaHangHoa()
         {
@@ -129,15 +129,15 @@ namespace QuanLyBanHang
             else hh.DonGia = int.Parse(txtDonGia.Text);
             if (txtSoLuongCon.Text == "") hh.SoLuongCon = null;
             else hh.SoLuongCon = int.Parse(txtSoLuongCon.Text.ToString());
-            db.SubmitChanges();
+            db.SaveChanges();
         }
         void XoaHangHoa()
         {
             try
             {
                 tblHangHoa hh = db.tblHangHoas.Where(n => n.IDHangHoa == int.Parse(txtIDHangHoa.Text)).First();
-                db.tblHangHoas.DeleteOnSubmit(hh);
-                db.SubmitChanges();
+                db.tblHangHoas.Remove(hh);
+                db.SaveChanges();
             }
             catch
             {

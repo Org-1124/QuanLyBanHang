@@ -16,11 +16,7 @@ namespace QuanLyBanHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new frmKhachHang());
-=======
-            Application.Run(new frmHangHoa());
->>>>>>> refs/remotes/origin/Hang_Hoa
+            Application.Run(new frmMain());
         }
     }
 }

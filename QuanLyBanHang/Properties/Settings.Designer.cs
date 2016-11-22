@@ -32,21 +32,5 @@ namespace QuanLyBanHang.Properties {
                 return ((string)(this["QuanLyBanHangConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-<<<<<<< HEAD
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TUANANH-PC\\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated Securi" +
-            "ty=True")]
-=======
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-L8JMH5Q\\SQLEXPRESS;Initial Catalog=QuanLyBanHang;Integrated S" +
-            "ecurity=True")]
->>>>>>> refs/remotes/origin/Hang_Hoa
-        public string QuanLyBanHangConnectionString1 {
-            get {
-                return ((string)(this["QuanLyBanHangConnectionString1"]));
-            }
-        }
     }
 }

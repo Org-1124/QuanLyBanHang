@@ -19,7 +19,7 @@ namespace QuanLyBanHang
             Xoa
         }
         LuaChon lc;
-        DatabaseDataContext db = new DatabaseDataContext();
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -96,8 +96,8 @@ namespace QuanLyBanHang
             else if(rdbNu.Checked==true)     nv.GioiTinh="Nữ";
             else nv.GioiTinh=null;
             nv.DiaChi=txtDiaChi.Text;
-            db.tblNhanViens.InsertOnSubmit(nv);
-            db.SubmitChanges();
+            db.tblNhanViens.Add(nv);
+            db.SaveChanges();
         }
         void SuaThongTinNhanVien()
         {
@@ -108,14 +108,14 @@ namespace QuanLyBanHang
             else if(rdbNu.Checked==true)     nv.GioiTinh="Nữ";
             else nv.GioiTinh=null;
             nv.DiaChi=txtDiaChi.Text;
-            db.SubmitChanges();
+            db.SaveChanges();
         }
         void XoaNhanVien()
         {
             tblNhanVien nv=db.tblNhanViens.Where(n=>n.IDNhanVien==int.Parse(txtIDNhanVien.Text)).First();
-            db.tblNhanViens.DeleteOnSubmit(nv);
-            db.SubmitChanges();
-            db.SubmitChanges();
+            db.tblNhanViens.Remove(nv);
+            db.SaveChanges();
+           
         }
 
         private void btnThem_Click(object sender, EventArgs e)

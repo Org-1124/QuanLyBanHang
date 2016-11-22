@@ -15,6 +15,7 @@ namespace QuanLyBanHang
         TabPage tab; 
         public frmMain()
         {
+            tab = new TabPage();
             InitializeComponent();
         }
 

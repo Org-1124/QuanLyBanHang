@@ -12,7 +12,7 @@ namespace QuanLyBanHang
 {
     public partial class frmKhachHang : Form
     {
-        DatabaseDataContext db = new DatabaseDataContext();
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         public frmKhachHang()
         {
             InitializeComponent();
@@ -84,8 +84,8 @@ namespace QuanLyBanHang
             kh.DiaChi = txtdiachi.Text;
             kh.DienThoai = txtsdt.Text;
 
-            db.tblKhachHangs.InsertOnSubmit(kh);
-            db.SubmitChanges();
+            db.tblKhachHangs.Add(kh);
+            db.SaveChanges();
             ChiDoc();
             LoadDataKhachHang();
         }
@@ -96,15 +96,15 @@ namespace QuanLyBanHang
             kh.DienThoai = txtsdt.Text;
             kh.DiaChi = txtdiachi.Text;
 
-            db.SubmitChanges();
+            db.SaveChanges();
             ChiDoc();
             LoadDataKhachHang();
         }
         void XoaKhachHang()
         {
             tblKhachHang kh = db.tblKhachHangs.Where(n => n.IDKhachHang == int.Parse(txtmakh.Text)).First();
-            db.tblKhachHangs.DeleteOnSubmit(kh);
-            db.SubmitChanges();
+            db.tblKhachHangs.Remove(kh);
+            db.SaveChanges();
             LoadDataKhachHang();
         }
 
