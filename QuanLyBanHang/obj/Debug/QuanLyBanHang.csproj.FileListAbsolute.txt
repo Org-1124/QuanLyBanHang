@@ -1,2 +1,4 @@
 D:\Project\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
 D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
