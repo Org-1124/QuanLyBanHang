@@ -47,7 +47,7 @@
             this.dgrkhachhang = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrkhachhang)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgrkhachhang)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -231,7 +231,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrkhachhang)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.dgrkhachhang)).EndInit();
             this.ResumeLayout(false);
 
         }
