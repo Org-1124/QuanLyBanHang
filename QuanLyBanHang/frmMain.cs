@@ -15,31 +15,67 @@ namespace QuanLyBanHang
         TabPage tab; 
         public frmMain()
         {
-            tab = new TabPage();
             InitializeComponent();
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
+            frmNhanVien frm = new frmNhanVien();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tab = new TabPage("Quản lí nhân viên           ");
+            tab.Controls.Add(frm);
+            tabForm.TabPages.Add(tab);
+            frm.Visible = true;
         }
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
+            frmKhachHang frm = new frmKhachHang();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tab = new TabPage("Quản lí khách hàng           ");
+            tab.Controls.Add(frm);
+            tabForm.TabPages.Add(tab);
+            frm.Visible = true;
         }
 
         private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
+            frmNhanVien frm = new frmNhanVien();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tab = new TabPage("Quản lí bán hàng           ");
+            tab.Controls.Add(frm);
+            tabForm.TabPages.Add(tab);
+            frm.Visible = true;
         }
 
         private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
+            frmNhanVien frm = new frmNhanVien();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tab = new TabPage("Quản lí hàng hóa          ");
+            tab.Controls.Add(frm);
+            tabForm.TabPages.Add(tab);
+            frm.Visible = true;
         }
 
         private void tàiKhoảnToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -15,3 +15,4 @@ D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties
 D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
 D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
 D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
