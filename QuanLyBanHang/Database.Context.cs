@@ -29,5 +29,7 @@ namespace QuanLyBanHang
         public virtual DbSet<tblHoaDon> tblHoaDons { get; set; }
         public virtual DbSet<tblKhachHang> tblKhachHangs { get; set; }
         public virtual DbSet<tblNhanVien> tblNhanViens { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<tblTaiKhoan> tblTaiKhoans { get; set; }
     }
 }

@@ -61,7 +61,7 @@ namespace QuanLyBanHang
         }
         void LoadDataHangHoa()
         {
-            dgvHangHoa.DataSource = db.tblHangHoas.Select(n => n);
+            dgvHangHoa.DataSource = db.tblHangHoas.Select(n => n).ToList();
             dgvHangHoa.Columns["TenHang"].HeaderText = "Tên Hàng";
             dgvHangHoa.Columns["IDHangHoa"].HeaderText = "ID Hành Hóa";
             dgvHangHoa.Columns["SoLuongCon"].HeaderText = "Số Lượng Còn";
@@ -123,7 +123,8 @@ namespace QuanLyBanHang
         }
         void SuaHangHoa()
         {
-            tblHangHoa hh = db.tblHangHoas.Where(n => n.IDHangHoa == int.Parse(txtIDHangHoa.Text)).First();
+            int id = int.Parse(txtIDHangHoa.Text);
+            tblHangHoa hh = db.tblHangHoas.Where(n => n.IDHangHoa ==id).First();
             hh.TenHang = txtTenHangHoa.Text;
             if (txtDonGia.Text == "") hh.DonGia = null;
             else hh.DonGia = int.Parse(txtDonGia.Text);
@@ -135,7 +136,8 @@ namespace QuanLyBanHang
         {
             try
             {
-                tblHangHoa hh = db.tblHangHoas.Where(n => n.IDHangHoa == int.Parse(txtIDHangHoa.Text)).First();
+                int id = int.Parse(txtIDHangHoa.Text);
+                tblHangHoa hh = db.tblHangHoas.Where(n => n.IDHangHoa ==id).First();
                 db.tblHangHoas.Remove(hh);
                 db.SaveChanges();
             }

@@ -12,7 +12,7 @@ namespace QuanLyBanHang
 {
     public partial class frmMain : Form
     {
-        TabPage tab; 
+        TabPage tab;
         public frmMain()
         {
             InitializeComponent();
@@ -26,6 +26,19 @@ namespace QuanLyBanHang
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
             tab = new TabPage("Quản lí nhân viên           ");
+            tab.Controls.Add(frm);
+            tabForm.TabPages.Add(tab);
+            frm.Visible = true;
+        }
+
+        private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
+            frmHangHoa frm = new frmHangHoa();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            tab = new TabPage("Quản lí hàng hóa           ");
             tab.Controls.Add(frm);
             tabForm.TabPages.Add(tab);
             frm.Visible = true;
@@ -47,7 +60,7 @@ namespace QuanLyBanHang
         private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
-            frmNhanVien frm = new frmNhanVien();
+            frm_BanHang frm = new frm_BanHang();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
@@ -57,27 +70,17 @@ namespace QuanLyBanHang
             frm.Visible = true;
         }
 
-        private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
-            frmNhanVien frm = new frmNhanVien();
+            frmTaiKhoan frm = new frmTaiKhoan();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
-            tab = new TabPage("Quản lí hàng hóa          ");
+            tab = new TabPage("Quản lí tài khoản           ");
             tab.Controls.Add(frm);
             tabForm.TabPages.Add(tab);
             frm.Visible = true;
-        }
-
-        private void tàiKhoảnToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

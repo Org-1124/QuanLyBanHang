@@ -30,7 +30,7 @@ namespace QuanLyBanHang
         {
             var s = from kh in db.tblKhachHangs
                     select new { kh.IDKhachHang, kh.TenKhachHang, kh.DiaChi, kh.DienThoai };
-            dgrkhachhang.DataSource = s;
+            dgrkhachhang.DataSource = s.ToList();
             TenCot();
             ChiDoc();
 

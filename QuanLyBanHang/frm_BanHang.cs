@@ -115,13 +115,13 @@ namespace QuanLyBanHang
                 }
                 else { hd.IDKhachHang = G_ID; }
                 total += int.Parse(dr.Cells["DonGia"].Value.ToString()) * int.Parse(txtSoluong.Text);
-                    ListViewItem item = new ListViewItem(dr.Cells["TenHang"].Value.ToString());
-                    item.SubItems.Add(txtSoluong.Text);
-                    item.SubItems.Add(total.ToString());
-                    item.SubItems.Add((hd.IDHoaDon).ToString());
-                    item.SubItems.Add((hd.IDKhachHang).ToString());
-                    lvHangHoa.Items.Add(item);
-                    total = 0;
+                ListViewItem item = new ListViewItem(dr.Cells["TenHang"].Value.ToString());
+                item.SubItems.Add(txtSoluong.Text);
+                item.SubItems.Add(total.ToString());
+                item.SubItems.Add((hd.IDHoaDon).ToString());
+                item.SubItems.Add((hd.IDKhachHang).ToString());
+                lvHangHoa.Items.Add(item);
+                total = 0;
 
                 // them vao trong tblHoaDon
                 // sinh ra IDkhachhang
@@ -132,7 +132,7 @@ namespace QuanLyBanHang
                 hd.SoLuong = int.Parse(txtSoluong.Text);
                 if(db.tblKhachHangs.SingleOrDefault(x=>x.IDKhachHang == G_ID) == null)
                 {
-                 //   kh.IDKhachHang = hd.IDKhachHang;
+                    kh.IDKhachHang =(int)hd.IDKhachHang;
                     kh.DiaChi = "";
                     kh.DienThoai = "";
                     kh.TenKhachHang = txtTenKhach.Text;
@@ -141,7 +141,7 @@ namespace QuanLyBanHang
                 }
                
                  db.tblHoaDons.Add(hd);
-                    db.SaveChanges();
+                 db.SaveChanges();
 
                 txtTongTien.Text = (int.Parse(txtTongTien.Text) + int.Parse(item.SubItems[2].Text)).ToString();
                 }
@@ -200,6 +200,7 @@ namespace QuanLyBanHang
                 lvHangHoa.Items.Remove(item);
             }
             txtTongTien.Text = "0";
-        }        
+        }
+
     }
 }

@@ -32,7 +32,7 @@ namespace QuanLyBanHang
         }
         private void LoadDataNhanVien()
         {
-            dgvNhanVien.DataSource = db.tblNhanViens.Select(n=>n);
+            dgvNhanVien.DataSource = db.tblNhanViens.Select(n=>n).ToList();
             dgvNhanVien.Columns["IDNhanVien"].HeaderText="Mã Nhân Viên";
             dgvNhanVien.Columns["TenNhanVien"].HeaderText="Họ Tên";
             dgvNhanVien.Columns["GioiTinh"].HeaderText="Giới Tính";
@@ -101,7 +101,8 @@ namespace QuanLyBanHang
         }
         void SuaThongTinNhanVien()
         {
-            tblNhanVien nv=db.tblNhanViens.Where(n=>n.IDNhanVien==int.Parse(txtIDNhanVien.Text)).First();
+            int id = int.Parse(txtIDNhanVien.Text);
+            tblNhanVien nv=db.tblNhanViens.Where(n=>n.IDNhanVien==id).First();
             nv.TenNhanVien=txtHoTen.Text;
             nv.NgaySinh=dtpNgaySinh.Value;
             if(rdbNam.Checked==true)    nv.GioiTinh="Nam";
@@ -112,7 +113,8 @@ namespace QuanLyBanHang
         }
         void XoaNhanVien()
         {
-            tblNhanVien nv=db.tblNhanViens.Where(n=>n.IDNhanVien==int.Parse(txtIDNhanVien.Text)).First();
+            int id = int.Parse(txtIDNhanVien.Text);
+            tblNhanVien nv=db.tblNhanViens.Where(n=>n.IDNhanVien==id).First();
             db.tblNhanViens.Remove(nv);
             db.SaveChanges();
            
@@ -204,6 +206,6 @@ namespace QuanLyBanHang
         {
             btnTimKiem_Click(sender,e);
         }
-        
+
     }
 }

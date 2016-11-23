@@ -1,18 +1,20 @@
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmHangHoa.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmKhachHang.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmNhanVien.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmTaiKhoan.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frm_BanHang.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
-D:\Project\GitHub\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+c:\users\lehaisonmath\documents\visual studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csprojResolveAssemblyReference.cache
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmHangHoa.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmKhachHang.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmMain.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmNhanVien.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmTaiKhoan.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frm_BanHang.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.Cache
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.dll
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.xml
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmDangKi.resources
+C:\Users\lehaisonmath\Documents\Visual Studio 2015\Projects\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.frmDangNhap.resources
