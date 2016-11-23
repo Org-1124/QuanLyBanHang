@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{760487DE-1E01-473D-90ED-DFBB83CFF39F}</ProjectGuid>
+    <ProjectGuid>{0D61BC4C-0B63-4FDD-AE36-48B9C3AA2166}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLyBanHang</RootNamespace>
@@ -32,9 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +56,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.designer.cs">
+    <Compile Include="Database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Database.dbml</DependentUpon>
+      <DependentUpon>Database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKi.designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHangHoa.Designer.cs">
+      <DependentUpon>frmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -57,18 +101,67 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BanHang.Designer.cs">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyBanHangDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <None Include="Database.dbml.layout">
-      <DependentUpon>Database.dbml</DependentUpon>
-    </None>
+    <Compile Include="tblHangHoa.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblHoaDon.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblKhachHang.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblNhanVien.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTaiKhoan.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHangHoa.resx">
+      <DependentUpon>frmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BanHang.resx">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,11 +172,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Database.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Database.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EntityDeploy Include="Database.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,23 +189,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyBanHangDataSet.xsc">
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyBanHangDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyBanHangDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyBanHangDataSet.xss">
-      <DependentUpon>QuanLyBanHangDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Content Include="Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblHangHoa">
+    <Key>
+      <PropertyRef Name="IDHangHoa" />
+    </Key>
+    <Property Name="IDHangHoa" Type="Int32" Nullable="false" />
+    <Property Name="TenHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongCon" Type="Int32" />
+    <Property Name="DonGia" Type="Int32" />
+    <NavigationProperty Name="tblHoaDons" Relationship="Self.FK_tblHoaDon_tblHangHoa" FromRole="tblHangHoa" ToRole="tblHoaDon" />
+  </EntityType>
+  <EntityType Name="tblHoaDon">
+    <Key>
+      <PropertyRef Name="IDHoaDon" />
+    </Key>
+    <Property Name="IDHoaDon" Type="Int32" Nullable="false" />
+    <Property Name="IDKhachHang" Type="Int32" />
+    <Property Name="IDNhanVien" Type="Int32" />
+    <Property Name="ThoiGian" Type="DateTime" Precision="3" />
+    <Property Name="IDHangHoa" Type="Int32" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Int32" />
+    <NavigationProperty Name="tblHangHoa" Relationship="Self.FK_tblHoaDon_tblHangHoa" FromRole="tblHoaDon" ToRole="tblHangHoa" />
+    <NavigationProperty Name="tblKhachHang" Relationship="Self.FK_tblHoaDon_tblKhachHang" FromRole="tblHoaDon" ToRole="tblKhachHang" />
+    <NavigationProperty Name="tblNhanVien" Relationship="Self.FK_tblHoaDon_tblNhanVien1" FromRole="tblHoaDon" ToRole="tblNhanVien" />
+  </EntityType>
+  <EntityType Name="tblKhachHang">
+    <Key>
+      <PropertyRef Name="IDKhachHang" />
+    </Key>
+    <Property Name="IDKhachHang" Type="Int32" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblHoaDons" Relationship="Self.FK_tblHoaDon_tblKhachHang" FromRole="tblKhachHang" ToRole="tblHoaDon" />
+  </EntityType>
+  <EntityType Name="tblNhanVien">
+    <Key>
+      <PropertyRef Name="IDNhanVien" />
+    </Key>
+    <Property Name="IDNhanVien" Type="Int32" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblHoaDons" Relationship="Self.FK_tblHoaDon_tblNhanVien1" FromRole="tblNhanVien" ToRole="tblHoaDon" />
+  </EntityType>
+  <Association Name="FK_tblHoaDon_tblHangHoa">
+    <End Role="tblHangHoa" Type="Self.tblHangHoa" Multiplicity="0..1" />
+    <End Role="tblHoaDon" Type="Self.tblHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHangHoa">
+        <PropertyRef Name="IDHangHoa" />
+      </Principal>
+      <Dependent Role="tblHoaDon">
+        <PropertyRef Name="IDHangHoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHoaDon_tblKhachHang">
+    <End Role="tblKhachHang" Type="Self.tblKhachHang" Multiplicity="0..1" />
+    <End Role="tblHoaDon" Type="Self.tblHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKhachHang">
+        <PropertyRef Name="IDKhachHang" />
+      </Principal>
+      <Dependent Role="tblHoaDon">
+        <PropertyRef Name="IDKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHoaDon_tblNhanVien1">
+    <End Role="tblNhanVien" Type="Self.tblNhanVien" Multiplicity="0..1" />
+    <End Role="tblHoaDon" Type="Self.tblHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhanVien">
+        <PropertyRef Name="IDNhanVien" />
+      </Principal>
+      <Dependent Role="tblHoaDon">
+        <PropertyRef Name="IDNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyBanHangEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblHangHoas" EntityType="Self.tblHangHoa" />
+    <EntitySet Name="tblHoaDons" EntityType="Self.tblHoaDon" />
+    <EntitySet Name="tblKhachHangs" EntityType="Self.tblKhachHang" />
+    <EntitySet Name="tblNhanViens" EntityType="Self.tblNhanVien" />
+    <AssociationSet Name="FK_tblHoaDon_tblHangHoa" Association="Self.FK_tblHoaDon_tblHangHoa">
+      <End Role="tblHangHoa" EntitySet="tblHangHoas" />
+      <End Role="tblHoaDon" EntitySet="tblHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHoaDon_tblKhachHang" Association="Self.FK_tblHoaDon_tblKhachHang">
+      <End Role="tblKhachHang" EntitySet="tblKhachHangs" />
+      <End Role="tblHoaDon" EntitySet="tblHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHoaDon_tblNhanVien1" Association="Self.FK_tblHoaDon_tblNhanVien1">
+      <End Role="tblNhanVien" EntitySet="tblNhanViens" />
+      <End Role="tblHoaDon" EntitySet="tblHoaDons" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="QuanLyBanHangModel.sysdiagram" />
+    <EntitySet Name="tblTaiKhoans" EntityType="QuanLyBanHangModel.tblTaiKhoan" />
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblTaiKhoan">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
